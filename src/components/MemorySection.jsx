@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import './MemorySection.css'
+import CafeImage from './Images/Cafe.png'
+import FaceFaceImage from './Images/face-face.png'
+import VacationImage from './Images/vacation.png'
 
 const MemorySection = () => {
   const sectionRef = useRef(null)
@@ -53,34 +56,13 @@ const MemorySection = () => {
           <h2 className="section-title">Our Moments Together</h2>
           <div className="photos-grid">
             <div className="photo-card">
-              <div className="photo-placeholder">
-                <div className="photo-icon">📸</div>
-                <p className="photo-text">Photo 1</p>
-                <p className="photo-hint">Add your image</p>
-              </div>
-              {/* To add your photo, replace the photo-placeholder div above with:
-                  <img src="/path/to/your/photo1.jpg" alt="Hikma and I" className="our-photo" />
-              */}
+              <img src={FaceFaceImage} alt="Our beautiful moment" className="our-photo" />
             </div>
             <div className="photo-card">
-              <div className="photo-placeholder">
-                <div className="photo-icon">📸</div>
-                <p className="photo-text">Photo 2</p>
-                <p className="photo-hint">Add your image</p>
-              </div>
-              {/* To add your photo, replace the photo-placeholder div above with:
-                  <img src="/path/to/your/photo2.jpg" alt="Hikma and I" className="our-photo" />
-              */}
+              <img src={CafeImage} alt="Our cafe moment" className="our-photo" />
             </div>
             <div className="photo-card">
-              <div className="photo-placeholder">
-                <div className="photo-icon">📸</div>
-                <p className="photo-text">Photo 3</p>
-                <p className="photo-hint">Add your image</p>
-              </div>
-              {/* To add your photo, replace the photo-placeholder div above with:
-                  <img src="/path/to/your/photo3.jpg" alt="Hikma and I" className="our-photo" />
-              */}
+              <img src={VacationImage} alt="Our vacation moment" className="our-photo" />
             </div>
           </div>
         </div>
