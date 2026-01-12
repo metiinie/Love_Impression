@@ -1,0 +1,94 @@
+.custom-pointer {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.custom-pointer.visible {
+  opacity: 1;
+}
+
+.pointer-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 182, 193, 0.9);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(255, 182, 193, 0.6);
+  animation: pointerPulse 1.5s ease-in-out infinite;
+}
+
+.pointer-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 182, 193, 0.5);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: pointerRing 1.5s ease-out infinite;
+}
+
+.pointer-ring.ring-2 {
+  animation-delay: 0.5s;
+  border-color: rgba(255, 105, 180, 0.4);
+}
+
+.pointer-ring.ring-3 {
+  animation-delay: 1s;
+  border-color: rgba(255, 20, 147, 0.3);
+}
+
+@keyframes pointerPulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.3);
+    opacity: 0.7;
+  }
+}
+
+@keyframes pointerRing {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
+
+/* Hide default cursor on interactive elements */
+button,
+a,
+.proposal-btn,
+.love-animation-section {
+  cursor: none;
+}
+
+/* Mobile: Hide custom pointer on touch devices */
+@media (max-width: 768px) {
+  .custom-pointer {
+    display: none;
+  }
+  
+  button,
+  a,
+  .proposal-btn,
+  .love-animation-section {
+    cursor: pointer;
+  }
+}
+

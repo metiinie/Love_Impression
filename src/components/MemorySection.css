@@ -1,0 +1,470 @@
+.memory-section {
+  min-height: 100vh;
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #a8e6cf 0%, #dcedc8 25%, #c5e1a5 50%, #aed581 75%, #9ccc65 100%);
+  background-size: 400% 400%;
+  animation: memoryGradientShift 18s ease infinite;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes memoryGradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Green Butterfly Background */
+.butterfly-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.butterfly-emoji {
+  position: absolute;
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  opacity: 0.2;
+  filter: hue-rotate(60deg) saturate(1.5);
+  animation: butterflyFly 25s ease-in-out infinite;
+}
+
+.butterfly-emoji:nth-child(1) { left: 5%; top: 10%; animation-delay: 0s; }
+.butterfly-emoji:nth-child(2) { left: 20%; top: 5%; animation-delay: 2s; }
+.butterfly-emoji:nth-child(3) { left: 35%; top: 15%; animation-delay: 4s; }
+.butterfly-emoji:nth-child(4) { left: 50%; top: 8%; animation-delay: 1s; }
+.butterfly-emoji:nth-child(5) { left: 65%; top: 20%; animation-delay: 3s; }
+.butterfly-emoji:nth-child(6) { left: 80%; top: 12%; animation-delay: 5s; }
+.butterfly-emoji:nth-child(7) { left: 10%; top: 70%; animation-delay: 1.5s; }
+.butterfly-emoji:nth-child(8) { left: 25%; top: 80%; animation-delay: 3.5s; }
+.butterfly-emoji:nth-child(9) { left: 40%; top: 75%; animation-delay: 0.5s; }
+.butterfly-emoji:nth-child(10) { left: 90%; top: 85%; animation-delay: 4.5s; }
+
+@keyframes butterflyFly {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-30px) translateX(20px) rotate(15deg) scale(1.1);
+  }
+  50% {
+    transform: translateY(-15px) translateX(-15px) rotate(-10deg) scale(0.9);
+  }
+  75% {
+    transform: translateY(-40px) translateX(10px) rotate(20deg) scale(1.05);
+  }
+}
+
+.memory-container {
+  max-width: 1000px;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+/* Beautiful Flower Decoration */
+.flower-decoration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.flower {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  animation: flowerFloat 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px rgba(255, 182, 193, 0.5));
+}
+
+.flower:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.flower:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.flower:nth-child(3) {
+  animation-delay: 1.2s;
+}
+
+.flower:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.flower:nth-child(5) {
+  animation-delay: 0.9s;
+}
+
+@keyframes flowerFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(10deg);
+  }
+}
+
+/* Section Title */
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  color: #FFB6C1;
+  text-align: center;
+  margin-bottom: 3rem;
+  text-shadow: 2px 2px 15px rgba(255, 182, 193, 0.5), 0 0 25px rgba(255, 192, 203, 0.3);
+  font-weight: 600;
+  position: relative;
+  z-index: 10;
+}
+
+/* Photo Section */
+.photo-section {
+  margin-bottom: 5rem;
+  position: relative;
+  z-index: 10;
+}
+
+.photos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.photo-card {
+  background: rgba(255, 255, 255, 0.25);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-radius: 25px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.photo-placeholder {
+  width: 100%;
+  min-height: 400px;
+  background: linear-gradient(135deg, rgba(255, 182, 193, 0.2) 0%, rgba(255, 192, 203, 0.2) 100%);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.photo-placeholder:hover {
+  background: linear-gradient(135deg, rgba(255, 182, 193, 0.3) 0%, rgba(255, 192, 203, 0.3) 100%);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.photo-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.photo-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  color: #FFC0CB;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  text-shadow: 0 0 10px rgba(255, 192, 203, 0.4);
+}
+
+.photo-hint {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  color: #FFB6C1;
+  font-style: italic;
+  text-shadow: 0 0 8px rgba(255, 182, 193, 0.3);
+}
+
+.our-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Dream Section */
+.dream-section {
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+/* Ring Emoji Background */
+.ring-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.ring-emoji {
+  position: absolute;
+  font-size: clamp(2rem, 4vw, 4rem);
+  opacity: 0.2;
+  animation: ringFloat 20s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
+}
+
+.ring-emoji:nth-child(1) { left: 8%; top: 15%; animation-delay: 0s; }
+.ring-emoji:nth-child(2) { left: 18%; top: 5%; animation-delay: 1.3s; }
+.ring-emoji:nth-child(3) { left: 28%; top: 25%; animation-delay: 0.6s; }
+.ring-emoji:nth-child(4) { left: 38%; top: 10%; animation-delay: 2s; }
+.ring-emoji:nth-child(5) { left: 48%; top: 30%; animation-delay: 0.3s; }
+.ring-emoji:nth-child(6) { left: 58%; top: 15%; animation-delay: 1.6s; }
+.ring-emoji:nth-child(7) { left: 68%; top: 35%; animation-delay: 0.9s; }
+.ring-emoji:nth-child(8) { left: 78%; top: 20%; animation-delay: 2.3s; }
+.ring-emoji:nth-child(9) { left: 88%; top: 40%; animation-delay: 0.5s; }
+.ring-emoji:nth-child(10) { left: 12%; top: 60%; animation-delay: 1.8s; }
+.ring-emoji:nth-child(11) { left: 22%; top: 70%; animation-delay: 0.2s; }
+.ring-emoji:nth-child(12) { left: 32%; top: 55%; animation-delay: 1.5s; }
+.ring-emoji:nth-child(13) { left: 42%; top: 75%; animation-delay: 0.8s; }
+.ring-emoji:nth-child(14) { left: 92%; top: 65%; animation-delay: 2.1s; }
+.ring-emoji:nth-child(15) { left: 52%; top: 50%; animation-delay: 0.4s; }
+
+@keyframes ringFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-25px) rotate(90deg) scale(1.1);
+  }
+  50% {
+    transform: translateY(-10px) rotate(180deg) scale(0.95);
+  }
+  75% {
+    transform: translateY(-35px) rotate(270deg) scale(1.05);
+  }
+}
+
+.dream-card {
+  background: rgba(255, 255, 255, 0.25);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-radius: 25px;
+  padding: 3.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.dream-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 182, 193, 0.1) 0%, transparent 70%);
+  animation: dreamGlow 8s ease-in-out infinite;
+}
+
+@keyframes dreamGlow {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+}
+
+.dream-icon {
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: dreamFloat 4s ease-in-out infinite;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes dreamFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+}
+
+.dream-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.1rem, 2.2vw, 1.3rem);
+  color: #E91E63;
+  line-height: 2;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 300;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 0 12px rgba(233, 30, 99, 0.4), 0 0 20px rgba(255, 105, 180, 0.2);
+}
+
+.dream-text:last-child {
+  margin-bottom: 0;
+}
+
+/* Reveal Animation - using App.css reveal styles */
+.photo-section.reveal.active {
+  transition-delay: 0.2s;
+}
+
+.dream-section.reveal.active {
+  transition-delay: 0.4s;
+}
+
+@media (max-width: 768px) {
+  .memory-section {
+    padding: 3rem 1rem;
+    min-height: auto;
+  }
+  
+  .flower-decoration {
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .flower {
+    font-size: 1.75rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .photos-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .photo-card {
+    padding: 1.5rem;
+  }
+  
+  .photo-placeholder {
+    min-height: 250px;
+  }
+  
+  .photo-icon {
+    font-size: 2.5rem;
+  }
+  
+  .photo-text {
+    font-size: 1rem;
+  }
+  
+  .photo-hint {
+    font-size: 0.85rem;
+  }
+  
+  .dream-section {
+    margin-bottom: 1.5rem;
+  }
+  
+  .dream-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .dream-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .dream-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+  }
+  
+  .butterfly-emoji,
+  .ring-emoji {
+    font-size: 2rem;
+    opacity: 0.15;
+  }
+}
+
+@media (max-width: 480px) {
+  .memory-section {
+    padding: 2rem 0.75rem;
+  }
+  
+  .flower-decoration {
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .flower {
+    font-size: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .photos-grid {
+    gap: 1rem;
+  }
+  
+  .photo-card {
+    padding: 1.25rem;
+  }
+  
+  .photo-placeholder {
+    min-height: 200px;
+  }
+  
+  .photo-icon {
+    font-size: 2rem;
+  }
+  
+  .dream-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .dream-text {
+    font-size: 0.95rem;
+  }
+}
+
