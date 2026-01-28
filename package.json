@@ -1,7 +1,7 @@
 {
-  "name": "hikma-love-proposal",
+  "name": "imani-love-proposal",
   "version": "1.0.0",
-  "description": "A romantic love proposal website for Hikma",
+  "description": "A romantic love proposal website for Imani",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

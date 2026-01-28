@@ -54,9 +54,9 @@ const StorySection = () => {
         
         <div className="story-card">
           <div className="story-icon">💫</div>
-          <h3 className="story-heading">When I See You</h3>
+          <h3 className="story-heading">When I See Imani</h3>
           <p className="story-text">
-            I didn't know that a single moment could change everything. But then you walked into my life, 
+            I didn't know that a single moment could change everything. But then Imani walked into my life, 
             and suddenly, all the pieces I didn't even know were missing started falling into place. 
             It wasn't about finding someone perfect—it was about finding someone who made everything feel right.
           </p>

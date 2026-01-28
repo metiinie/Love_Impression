@@ -31,9 +31,9 @@ const HeroSection = () => {
       <div className="hero-content">
         <h1 className="hero-title">
           to my dear 
-          Hikma  <span className="heart-icon">❤️</span>
+          Imani  <span className="heart-icon">❤️</span>
         </h1>
-        <h3 className="hero-title">My Princess <span className="heart-icon">👸</span>
+        <h3 className="hero-title">My Queen <span className="heart-icon">👸</span>
         </h3>
         <p className="hero-subtitle">
           In a world of billions, you found a way to make everything feel like it was meant to be

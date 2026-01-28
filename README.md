@@ -1,6 +1,6 @@
-# For Hikma ❤️ - A Love Proposal Website
+# For Imani ❤️ - A Love Proposal Website
 
-A beautiful, emotionally engaging single-page React application expressing love and ending with a gentle proposal.
+A beautiful, emotionally engaging single-page React application expressing love for Imani and ending with a gentle proposal.
 
 ## Features
 
@@ -133,5 +133,5 @@ To personalize the content:
 
 ---
 
-Made with ❤️ for Hikma
+Made with ❤️ for Imani
 

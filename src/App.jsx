@@ -4,6 +4,7 @@ import StorySection from './components/StorySection'
 import LoveAnimationSection from './components/LoveAnimationSection'
 import MemorySection from './components/MemorySection'
 import ProposalSection from './components/ProposalSection'
+import VideoSection from './components/VideoSection'
 import CursorTrail from './components/CursorTrail'
 import PointerAnimation from './components/PointerAnimation'
 import './App.css'
@@ -35,6 +36,7 @@ function App() {
       <HeroSection />
       <StorySection />
       <LoveAnimationSection />
+      <VideoSection />
       <MemorySection />
       <ProposalSection />
     </div>

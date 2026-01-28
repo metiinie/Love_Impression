@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
 import './MemorySection.css'
-import CafeImage from './Images/Cafe.png'
+import CafeImage from './Images/cafe-1.png'
+import VacationImage from './Images/vacation-1.png'
 import FaceFaceImage from './Images/face-face.png'
-import VacationImage from './Images/vacation.png'
+
 
 const MemorySection = () => {
   const sectionRef = useRef(null)
@@ -53,16 +54,16 @@ const MemorySection = () => {
             <span className="butterfly-emoji">🦋</span>
           </div>
           
-          <h2 className="section-title">Our Moments Together</h2>
+          <h2 className="section-title">Our Precious Moments with Imani</h2>
           <div className="photos-grid">
             <div className="photo-card">
-              <img src={FaceFaceImage} alt="Our beautiful moment" className="our-photo" />
+              <img src={FaceFaceImage} alt="Our beautiful moment with Imani" className="our-photo" />
             </div>
             <div className="photo-card">
-              <img src={CafeImage} alt="Our cafe moment" className="our-photo" />
+              <img src={CafeImage} alt="Our cafe moment with Imani" className="our-photo" />
             </div>
             <div className="photo-card">
-              <img src={VacationImage} alt="Our vacation moment" className="our-photo" />
+              <img src={VacationImage} alt="Our vacation moment with Imani" className="our-photo" />
             </div>
           </div>
         </div>
@@ -88,22 +89,22 @@ const MemorySection = () => {
             <span className="ring-emoji">💍</span>
           </div>
           
-          <h2 className="section-title">My Dream With You</h2>
+          <h2 className="section-title">My Dream With Imani</h2>
           <div className="dream-card">
             <div className="dream-icon">💭</div>
             <p className="dream-text">
-              I dream of waking up next to you every morning, seeing your smile before anything else. 
-              I dream of building a life together—filled with laughter, adventures, and quiet moments 
+              I dream of waking up next to Imani every morning, seeing her smile before anything else. 
+              I dream of building a life with Imani—filled with laughter, adventures, and quiet moments 
               that become our favorite memories.
             </p>
             <p className="dream-text">
-              I dream of growing old with you, of holding your hand through every season of life. 
+              I dream of growing old with Imani, of holding her hand through every season of life. 
               I dream of creating a home where love lives in every corner, where we can be ourselves 
-              completely, where every day feels like a gift because you're in it.
+              completely, where every day feels like a gift because she's in it.
             </p>
             <p className="dream-text">
-              Most of all, I dream of making you happy, of being the person who makes your heart feel 
-              safe, of being your partner in every adventure, big or small. I dream of us—together, 
+              Most of all, I dream of making Imani happy, of being the person who makes her heart feel 
+              safe, of being her partner in every adventure, big or small. I dream of us—together, 
               always.
             </p>
           </div>

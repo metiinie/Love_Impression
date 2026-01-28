@@ -45,7 +45,7 @@ const ProposalSection = () => {
     <section className="proposal-section">
       <div className="proposal-content">
         <h2 className="proposal-title">
-          my Sweet,
+          my Imani,
         </h2>
         <h3 className="proposal-question">
           will you be my forever?
@@ -84,7 +84,7 @@ const ProposalSection = () => {
           ))}
           <div className="celebration-message">
             <h2>YES! 🎉</h2>
-            <p>You've made me the happiest person in the world! ❤️</p>
+            <p>Imani, you've made me the happiest person in the world! ❤️</p>
           </div>
         </div>
       )}
